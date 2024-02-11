@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+FYLE=$1
+while read NUMBERS;
+do
+
+	factorise=($(factor $NUMBERS))
+	echo "$NUMBERS=$(($NUMBERS/${factorise[1]}))*${factorise[1]}"
+done < $FYLE
+
